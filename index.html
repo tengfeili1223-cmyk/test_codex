@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soft Minimalism · Dev Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="topbar glass">
+      <div>
+        <p class="eyebrow">Developer Workspace</p>
+        <h1>柔和极简控制台</h1>
+      </div>
+      <button id="themeToggle" class="ghost-btn" aria-label="切换主题">切换主题</button>
+    </header>
+
+    <main class="container">
+      <section class="hero card">
+        <div>
+          <h2>Build · Preview · Ship</h2>
+          <p>
+            以开发者工作流为核心，强调信息层级、代码可读性与高效反馈。布局基于 8pt
+            网格，视觉上保持柔和且克制。
+          </p>
+          <div class="meta-list">
+            <span>v2.3.1</span>
+            <span>98.6% uptime</span>
+            <span>32 services</span>
+          </div>
+        </div>
+        <div class="stack-pills" id="stackPills"></div>
+      </section>
+
+      <section class="grid cards" id="projectCards"></section>
+
+      <section class="card split">
+        <div>
+          <h3>Command Palette</h3>
+          <p class="muted">使用等宽字体输入任务，模拟开发者命令交互。</p>
+          <div class="terminal" id="terminalOutput"></div>
+        </div>
+        <form id="cmdForm" class="cmd-form">
+          <label for="cmdInput">$ run</label>
+          <textarea id="cmdInput" rows="6" spellcheck="false">npm run deploy -- --env=staging</textarea>
+          <button type="submit">执行命令</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
